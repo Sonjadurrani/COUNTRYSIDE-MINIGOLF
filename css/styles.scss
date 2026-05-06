@@ -18,3 +18,170 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+
+body{
+  margin:0;
+  font-family:sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+  position:relative;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  height:100px;
+
+  background:#c80000;
+}
+
+/* LINKS */
+.nav-left,
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+/* afstand til logo */
+.nav-left{
+  margin-right:180px;
+}
+
+.nav-right{
+  margin-left:180px;
+}
+
+/* LINKS STYLE */
+.navbar a{
+  text-decoration:none;
+  color:black;
+
+  font-size:20px;
+  font-weight:500;
+
+  position:relative;
+
+  transition:0.3s ease;
+}
+
+.navbar a::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-5px;
+
+  width:0%;
+  height:2px;
+
+  background:black;
+
+  transition:0.3s ease;
+}
+
+/* hover */
+.navbar a:hover{
+  font-weight:550;
+}
+
+.navbar a:hover::after{
+  width:100%;
+}
+
+/* LOGO CIRCLE */
+.logo-wrapper{
+  position:absolute;
+
+  left:50%;
+  transform:translateX(-50%);
+
+  bottom:-55px;
+
+  width:170px;
+  height:170px;
+
+  border-radius:50%;
+
+  background:#da0000;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:100;
+}
+
+/* LOGO */
+.logo-wrapper img{
+  width:95px;
+}
+
+/* BURGER */
+.burger{
+  display:none;
+
+  position:absolute;
+  right:20px;
+
+  font-size:32px;
+  cursor:pointer;
+}
+.mobile-menu{
+  position:absolute;
+
+  top:80px;
+  left:0;
+
+  width:100%;
+
+  background:#c80000;
+
+  display:none;
+
+  flex-direction:column;
+  align-items: center;
+
+  gap:20px;
+
+  padding-top:60px;
+  padding-bottom:30px;
+
+  z-index:99;
+}
+
+.mobile-menu.active{
+  display:flex;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .navbar{
+    height:80px;
+  }
+
+  .nav-left,
+  .nav-right{
+    display:none;
+  }
+
+  .burger{
+    display:block;
+  }
+
+  .logo-wrapper{
+    width:110px;
+    height:110px;
+
+    bottom:-35px;
+  }
+
+  .logo-wrapper img{
+    width:60px;
+  }
+
+}

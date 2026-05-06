@@ -14,10 +14,50 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
+
+
 <body>
 
+<nav class="navbar">
 
+  <div class="nav-left">
+    <a href="#">Priser</a>
+    <a href="#">Events</a>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="logo-wrapper">
+    <img src="images/logo.png" alt="logo">
+  </div>
+
+  <div class="nav-right">
+    <a href="#">Cafe</a>
+    <a href="#">Kontakt</a>
+  </div>
+
+  <div class="burger">
+    ☰
+  </div>
+
+  <div class="mobile-menu">
+    <a href="#">Priser</a>
+    <a href="#">Events</a>
+    <a href="#">Cafe</a>
+    <a href="#">Kontakt</a>
+  </div>
+
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+<script>
+
+    const burger = document.querySelector(".burger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    burger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+    });
+
+</script>
 </body>
 </html>
