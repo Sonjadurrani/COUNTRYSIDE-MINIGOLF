@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+
+  <title>Forside</title>
+
+  <meta name="robots" content="All">
+  <meta name="author" content="Udgiver">
+  <meta name="copyright" content="Information om copyright">
+
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="#">Priser</a>
+    <a href="#">Events</a>
+  </div>
+
+  <div class="logo-wrapper">
+    <img src="images/LOGO.png" alt="logo">
+  </div>
+
+  <div class="nav-right">
+    <a href="#">Cafe</a>
+    <a href="#">Kontakt</a>
+  </div>
+
+  <div class="burger">
+    ☰
+  </div>
+
+  <div class="mobile-menu">
+    <a href="#">Priser</a>
+    <a href="#">Events</a>
+    <a href="#">Cafe</a>
+    <a href="#">Kontakt</a>
+  </div>
+
+
+  <footer class="footer">
+
+
+    <div class="footer-content">
+
+      <div class="footer-column left">
+        <h3>ÅBNINGSTIDER</h3>
+        <p>Man–fredag 9–20</p>
+        <p>Weekend 9–20</p>
+        <p>Helligdage 9–20</p>
+      </div>
+
+      <div class="footer-column center">
+        <img src="images/LOGO.png" alt="Logo" class="footer-logo">
+
+        <h3>FØLG OS PÅ</h3>
+
+        <div class="socials">
+          <a href="https://facebook.com" target="_blank">
+            <img src="images/facebook.svg" alt="Facebook">
+          </a>
+
+          <a href="https://instagram.com" target="_blank">
+            <img src="images/instagram.svg" alt="Instagram">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column right">
+        <h3>ANDRE INFO</h3>
+
+        <a href="#">SPONSORER</a>
+        <a href="#">EVENTS</a>
+        <a href="#">HOTEL</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+</nav>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+<script>
+
+    const burger = document.querySelector(".burger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    burger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+    });
+
+</script>
+</body>
+</html>
